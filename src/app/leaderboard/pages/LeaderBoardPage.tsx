@@ -1,9 +1,9 @@
 import { getChannelData } from "@/app/actions";
-import { Leaderboard } from "@/pages/leaderboard/leaderboard";
 import { LeaderboardAuthentication } from "@/types";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
 import { getAuth } from "../actions";
+import { Leaderboard } from "../leaderboard";
 
 export const LeaderBoardPage = async () => {
   const authentication = await getAuth();

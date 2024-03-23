@@ -1,0 +1,73 @@
+.main-page {
+  margin: 40px auto 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 600px;
+}
+.main-page img {
+  margin: 0 auto;
+}
+.main-page h1 {
+  font-size: 2.25rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  text-wrap: balance;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.main-page .logg-inn-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-width: 1px;
+  border-radius: calc(var(--radius) + 4px);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main-page .logg-inn-container .form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.main-page .logg-inn-container .form-header h2 {
+  font-size: 1.5rem;
+}
+.main-page .logg-inn-container .form-header p {
+  font-size: 1rem;
+}
+.main-page .logg-inn-container .form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main-page .logg-inn-container .form-container .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.main-page .logg-inn-container .form-container .input-wrapper .form-input {
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-width: 1px;
+  border-color: hsl(var(--input));
+  border-radius: calc(var(--radius) - 2px);
+  background-color: transparent;
+}
+.main-page .logg-inn-container .form-container .logg-inn-knapp {
+  margin-top: 1rem;
+}
+.main-page .logg-inn-container .error-container {
+  padding: 0.5rem;
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+  border-radius: calc(var(--radius) - 3px);
+}/*# sourceMappingURL=page.css.map */

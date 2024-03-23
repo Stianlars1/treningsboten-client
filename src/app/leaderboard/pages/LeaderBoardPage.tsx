@@ -14,8 +14,8 @@ export const LeaderBoardPage = async () => {
     authentication.value
   );
 
-  const data = await getChannelData(auth.channel, auth.token);
-  const leaderboardData = { ...data, channelName: auth.authToken };
+  const data = await getChannelData(auth.channelId, auth.authToken);
+  const leaderboardData = { ...data, channelName: auth.channelName };
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

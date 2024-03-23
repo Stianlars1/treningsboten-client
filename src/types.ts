@@ -49,12 +49,14 @@ export interface ErrorResponse {
 }
 
 export interface LeaderboardAuthentication {
-  token: string;
-  channel: string;
+  channelId: string;
+  channelName: string;
   authenticated: boolean;
   authToken: string;
 }
 export interface AuthentificationResponse {
   authentification: string;
   authToken: string;
+  channelName: string;
+  channelId: string;
 }

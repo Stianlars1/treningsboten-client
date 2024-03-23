@@ -1,18 +1,17 @@
+import { LogOutButton } from "@/components/ui/buttons/logout/logOutButton";
 import { Results } from "@/types";
 import "./css/leaderboard.css";
 import { MonthlySummary } from "./monthlySummary/monthlySummary";
 import { TopPerformersAllTime } from "./topPerformersAllTime/topPerformersAllTime";
 
 export const Leaderboard = ({ data }: { data: Results }) => {
-  //     MonthlySummaryType
-  // ScoreAndUserType
   return (
     <>
       <div className="leaderboard">
         <header className="leaderboard__header">
           <h1>Leaderboard</h1>
           <p>{data.channelName}</p>
-          <p>scores of the channel</p>
+          <LogOutButton />
         </header>
 
         <div className="hero">

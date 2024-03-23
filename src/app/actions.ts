@@ -127,6 +127,8 @@ export async function authenticate(_currentState: unknown, formData: FormData) {
           token,
           authenticated: auth.authentification,
           authToken: auth.authToken,
+          channelId: auth.channelId,
+          channelName: auth.channelName,
         })
       );
     }

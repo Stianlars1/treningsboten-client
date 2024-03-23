@@ -1,28 +1,42 @@
 import { ButtonHTMLAttributes, ReactElement } from "react";
+import { Loader } from "../../loader/loader";
 import { ButtonType } from "../buttonTypes";
 import "../css/buttons.css";
 
-// Extend the ButtonHTMLAttributes<T> to include custom props
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonType;
   children: ReactElement | ReactElement[] | string;
+  width?: "fit-content" | "100%" | "auto" | "max-content" | "min-content";
+  variant?: ButtonType;
   loading?: boolean;
+  className?: string;
+  loadingText?: string;
 }
 
 export const Button = ({
   variant = "default",
   children,
-  loading,
+  loading = false,
+  width = "fit-content",
+  className = " ",
+  loadingText,
   ...rest
 }: ButtonProps) => {
   return (
     <button
-      className={`button button--${variant}`}
+      className={`button transition-colors button--${variant} ${className} ${
+        loading ? "button--loading" : ""
+      }`}
+      style={{ width }}
       disabled={rest.disabled || loading}
       aria-disabled={loading}
       {...rest}
     >
-      {loading && <span>Please wait...</span>}
+      {loading && (
+        <span className="isLoading">
+          {<Loader />}
+          {loadingText ? loadingText : "Vennligst vent"}
+        </span>
+      )}
 
       {!loading && children}
     </button>

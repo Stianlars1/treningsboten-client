@@ -2,8 +2,8 @@ import { getChannelData } from "@/app/actions";
 import { LeaderboardAuthentication } from "@/types";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
-import { getAuth } from "../actions";
-import { Leaderboard } from "../leaderboard";
+import { getAuth } from "./actions";
+import { LeaderboardContainer } from "./leaderboardContainer";
 
 export const LeaderBoardPage = async () => {
   const authentication = await getAuth();
@@ -19,7 +19,7 @@ export const LeaderBoardPage = async () => {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Leaderboard data={leaderboardData} />
+      <LeaderboardContainer data={leaderboardData} />
     </Suspense>
   );
 };

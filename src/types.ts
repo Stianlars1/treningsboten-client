@@ -23,13 +23,15 @@ export interface ScoreAndUserType {
 export interface MonthlySummaryType {
   [datekey: string]: ScoreAndUserType[];
 }
+export interface ScoreTodayType extends ScoreAndUserType {}
 
 export type Results = {
+  channelName: string;
+  winnerYesterday: ScoreAndUserType[] | null;
+  scoreToday: ScoreAndUserType[] | null;
   monthlySummary: MonthlySummaryType;
   topPerformersAllTime: ScoreAndUserType[];
   usersInfo: UserInfoType[];
-  scoreToday: ScoreAndUserType;
-  channelName: string;
 };
 
 export type GetChannelData = {

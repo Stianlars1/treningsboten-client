@@ -1,6 +1,6 @@
 import { ScoreAndUserType } from "@/types";
 import Image from "next/image";
-import { getEmoji } from "../leaderboard";
+import { getEmoji } from "../../leaderboardContainer";
 
 export const TopPerformersAllTime = ({
   data,

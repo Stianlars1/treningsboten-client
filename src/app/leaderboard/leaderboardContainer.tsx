@@ -1,10 +1,12 @@
 import { LogOutButton } from "@/components/ui/buttons/logout/logOutButton";
 import { Results } from "@/types";
 import "./css/leaderboard.css";
-import { MonthlySummary } from "./monthlySummary/monthlySummary";
-import { TopPerformersAllTime } from "./topPerformersAllTime/topPerformersAllTime";
+import { MonthlySummary } from "./sections/monthlySummary/monthlySummary";
+import { ScoreToday } from "./sections/scoreToday/scoreToday";
+import { TopPerformersAllTime } from "./sections/topPerformersAllTime/topPerformersAllTime";
+import { YesterdaysWinner } from "./sections/yesterdaysWinner/yesterdaysWinner";
 
-export const Leaderboard = ({ data }: { data: Results }) => {
+export const LeaderboardContainer = ({ data }: { data: Results }) => {
   return (
     <>
       <div className="leaderboard">
@@ -13,6 +15,11 @@ export const Leaderboard = ({ data }: { data: Results }) => {
           <p>{data.channelName}</p>
           <LogOutButton />
         </header>
+
+        <div className="leaderboard__featured">
+          <ScoreToday scoreToday={data.scoreToday} />
+          <YesterdaysWinner yesterdaysWinner={data.winnerYesterday} />
+        </div>
 
         <div className="hero">
           <MonthlySummary monthlySummary={data.monthlySummary} />

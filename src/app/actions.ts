@@ -133,10 +133,9 @@ export async function authenticate(_currentState: unknown, formData: FormData) {
       );
     }
   } catch (error: any) {
-    console.log("error", error);
     if (error instanceof TypeError) {
       return {
-        message: "Network error or invalid response (are you on a VPN?)",
+        message: "Network error or invalid response (VPN?)",
       };
     }
     if (error) {

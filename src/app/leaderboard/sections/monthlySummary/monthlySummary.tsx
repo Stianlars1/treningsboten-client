@@ -1,7 +1,7 @@
 import { MonthlySummaryType, ScoreAndUserType } from "@/types";
 import Image from "next/image";
 import { ReactElement } from "react";
-import { getEmoji } from "../leaderboard";
+import { getEmoji } from "../../leaderboardContainer";
 
 export const MonthlySummary = ({
   monthlySummary,
@@ -20,7 +20,7 @@ export const MonthlySummary = ({
         return (
           <>
             <div>
-              <h3>{formattedMonth}</h3>
+              <h3 className="ul-title">{formattedMonth}</h3>
               <ul>
                 {monthlySummary && (
                   <>

@@ -1,5 +1,5 @@
 import { ErrorBoundary } from "@/components/errorBoundary/errorBoundary";
-import { LeaderBoardPage } from "./pages/LeaderBoardPage";
+import { LeaderBoardPage } from "./LeaderBoardPage";
 
 export default async function Page() {
   return (

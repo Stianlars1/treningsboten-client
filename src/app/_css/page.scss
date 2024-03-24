@@ -1,6 +1,6 @@
 .main-page {
-  margin: 40px auto 0;
-  padding: 0 20px;
+  margin: 20px auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,6 +77,18 @@
       background-color: hsl(var(--destructive));
       color: hsl(var(--destructive-foreground));
       border-radius: calc(var(--radius) - 3px);
+      text-wrap: pretty;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-page {
+    gap: 20px;
+
+    img {
+      width: 150px;
+      height: auto;
     }
   }
 }
